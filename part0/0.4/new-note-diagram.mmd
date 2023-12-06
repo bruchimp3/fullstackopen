@@ -16,23 +16,23 @@ sequenceDiagram
     server-->>browser: HTML document
     deactivate server
 
-    browser->server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->browser: CSS File
+    server-->>browser: CSS File
     deactivate server
     
-    browser->server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate server
-    server-->browser: JavaScript File
+    server-->>browser: JavaScript File
     deactivate server
 
-    browser->server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.js
     activate server
-    server-->browser: JavaScript File
+    server-->>browser: JavaScript File
     deactivate server
 
-    browser->server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->browser: {content: "new note", date: "2023-12-06T07:05:59.812Z"}
+    server-->>browser: {content: "new note", date: "2023-12-06T07:05:59.812Z"}
     deactivate server
     Note left of server: The browser executes the callback function that renders the notes
