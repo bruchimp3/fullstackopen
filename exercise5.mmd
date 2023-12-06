@@ -1,0 +1,36 @@
+sequenceDiagram
+    participant browser
+    participant server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    activate server
+    Note right of browser: HTTP GET request to the server address spa
+
+    server-->>browser: HTML document
+    deactivate server
+    Note left of server:  renders the HTML file structure
+    
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    activate server
+    server-->>browser: CSS File
+    deactivate server
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+    activate server
+    server-->>browser: JavaScript spa.js File
+    deactivate server
+    
+
+
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    activate server
+    server-->>browser: [{content: "test", date: "2023-12-05T23:03:03.193Z"},…]
+    deactivate server
+    
+
+
+
+
+
+
